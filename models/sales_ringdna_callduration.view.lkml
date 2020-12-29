@@ -22,9 +22,9 @@ view: sales_ringdna_callduration {
     sql: ${TABLE}."Agent ID" ;;
   }
 
-  dimension: call_duration {
+  dimension: call_duration_minutes {
     type: number
-    sql: ${TABLE}."CALL_DURATION" ;;
+    sql: ${TABLE}."CALL_DURATION_MINUTES" ;;
   }
 
   dimension: call_id {
