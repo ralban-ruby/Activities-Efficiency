@@ -2,7 +2,7 @@ view: sales_activity_efficiency {
   sql_table_name: "MASTERDATA"."SALES_ACTIVITY_EFFICIENCY"
     ;;
 
-  dimension_group: activity {
+  dimension_group: activity_month {
     type: time
     timeframes: [
       raw,
@@ -14,17 +14,12 @@ view: sales_activity_efficiency {
     ]
     convert_tz: no
     datatype: date
-    sql: ${TABLE}."ACTIVITY_DATE" ;;
+    sql: ${TABLE}."ACTIVITY_MONTH" ;;
   }
 
   dimension: agent_name {
     type: string
     sql: ${TABLE}."AGENT_NAME" ;;
-  }
-
-  dimension: countopp_sold_date {
-    type: number
-    sql: ${TABLE}."COUNT(OPP_SOLD_DATE)" ;;
   }
 
   dimension: name {
@@ -37,7 +32,7 @@ view: sales_activity_efficiency {
     sql: ${TABLE}."OPP_OWNER_ID" ;;
   }
 
-  dimension_group: opp_sold {
+  dimension_group: opp_sold_month {
     type: time
     timeframes: [
       raw,
@@ -49,7 +44,7 @@ view: sales_activity_efficiency {
     ]
     convert_tz: no
     datatype: date
-    sql: ${TABLE}."OPP_SOLD_DATE" ;;
+    sql: ${TABLE}."OPP_SOLD_MONTH" ;;
   }
 
   dimension: owner_id {
@@ -57,9 +52,24 @@ view: sales_activity_efficiency {
     sql: ${TABLE}."OWNER_ID" ;;
   }
 
+  dimension: stage_name {
+    type: string
+    sql: ${TABLE}."STAGE_NAME" ;;
+  }
+
+  dimension: sum_opp {
+    type: number
+    sql: ${TABLE}."SUM_OPP" ;;
+  }
+
   dimension: tasks {
     type: number
     sql: ${TABLE}."TASKS" ;;
+  }
+
+  dimension: tasks_over_oppclosed {
+    type: number
+    sql: ${TABLE}."TASKS_OVER_OPPCLOSED" ;;
   }
 
   dimension: title {
@@ -69,6 +79,6 @@ view: sales_activity_efficiency {
 
   measure: count {
     type: count
-    drill_fields: [agent_name, name]
+    drill_fields: [agent_name, stage_name, name]
   }
 }
