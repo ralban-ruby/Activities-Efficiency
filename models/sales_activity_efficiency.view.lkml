@@ -52,11 +52,6 @@ view: sales_activity_efficiency {
     sql: ${TABLE}."OWNER_ID" ;;
   }
 
-  dimension: stage_name {
-    type: string
-    sql: ${TABLE}."STAGE_NAME" ;;
-  }
-
   dimension: sum_opp {
     type: number
     sql: ${TABLE}."SUM_OPP" ;;
@@ -79,6 +74,6 @@ view: sales_activity_efficiency {
 
   measure: count {
     type: count
-    drill_fields: [agent_name, stage_name, name]
+    drill_fields: [agent_name, name]
   }
 }
