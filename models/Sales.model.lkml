@@ -9,6 +9,7 @@ explore: sales_callsovertime {}
 explore: sales_ringdna_callduration_vs_numberofcalls {}
 explore: sales_queuecallsperday {}
 explore: sales_calls_per_sales_cycle {}
+explore: sales_ae_connect_rate {}
 
 datagroup: sales_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
