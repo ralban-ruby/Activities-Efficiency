@@ -29,7 +29,7 @@ explore: sales_ae_connect_rate {
   hidden: yes
 }
 explore: sales_avg_sold_duration {}
-
+explore: sales_avg_connected_duration {}
 datagroup: sales_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
   max_cache_age: "1 hour"
