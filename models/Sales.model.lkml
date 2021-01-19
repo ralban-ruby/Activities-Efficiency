@@ -32,6 +32,8 @@ explore: sales_avg_sold_duration {}
 explore: sales_avg_connected_duration {}
 explore: sales_avg_cor_accepted_duration {}
 explore: sales_avg_cor_duration {}
+explore: sales_avg_mql_duration {}
+explore: sales_avg_new_lead_duration {}
 datagroup: sales_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
   max_cache_age: "1 hour"
