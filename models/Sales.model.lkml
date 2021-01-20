@@ -55,7 +55,10 @@ explore: sales_avg_onboarding_duration {
 explore: sales_avg_proposal_duration {
   hidden: yes
 }
-explore: sales_avg_ttc_oppty{}
+explore: sales_avg_ttc_oppty{
+  hidden: yes
+}
+explore: sales_avg_ttc_fullcycle {}
 datagroup: sales_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
   max_cache_age: "1 hour"
