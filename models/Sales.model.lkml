@@ -37,6 +37,7 @@ explore: sales_avg_new_lead_duration {}
 explore: sales_avg_needs_analysis_duration {}
 explore: sales_avg_onboarding_duration {}
 explore: sales_avg_proposal_duration {}
+explore: sales_avg_ttc_oppty{}
 datagroup: sales_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
   max_cache_age: "1 hour"
