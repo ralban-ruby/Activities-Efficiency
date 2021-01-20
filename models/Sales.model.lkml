@@ -28,15 +28,33 @@ explore: sales_calls_per_sales_cycle {
 explore: sales_ae_connect_rate {
   hidden: yes
 }
-explore: sales_avg_sold_duration {}
-explore: sales_avg_connected_duration {}
-explore: sales_avg_cor_accepted_duration {}
-explore: sales_avg_cor_duration {}
-explore: sales_avg_mql_duration {}
-explore: sales_avg_new_lead_duration {}
-explore: sales_avg_needs_analysis_duration {}
-explore: sales_avg_onboarding_duration {}
-explore: sales_avg_proposal_duration {}
+explore: sales_avg_sold_duration {
+  hidden: yes
+}
+explore: sales_avg_connected_duration {
+  hidden: yes
+}
+explore: sales_avg_cor_accepted_duration {
+  hidden: yes
+}
+explore: sales_avg_cor_duration {
+  hidden: yes
+}
+explore: sales_avg_mql_duration {
+  hidden: yes
+}
+explore: sales_avg_new_lead_duration {
+  hidden: yes
+}
+explore: sales_avg_needs_analysis_duration {
+  hidden: yes
+}
+explore: sales_avg_onboarding_duration {
+  hidden: yes
+}
+explore: sales_avg_proposal_duration {
+  hidden: yes
+}
 explore: sales_avg_ttc_oppty{}
 datagroup: sales_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
