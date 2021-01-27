@@ -64,7 +64,10 @@ explore: sales_avg_ttc_fullcycle {
 explore: sales_avg_opty_value {
   hidden: yes
 }
-explore: sales_cancelled_sold_last30_d {}
+explore: sales_cancelled_sold_last30_d {
+  hidden: yes
+}
+explore: sales_chat_bookings {}
 datagroup: sales_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
   max_cache_age: "1 hour"
